@@ -14,7 +14,11 @@
   /* Styles for grid items */
   & > * {
     width: 100%;
-    max-width: 20rem;
+    flex-basis: 30%;
+    max-width: 60rem;
+  }
+  a > img{
+    object-fit: cover;
   }
 }
 
@@ -28,6 +32,7 @@
     /* Styles for grid items on smaller screens */
     & > * {
       max-width: 100%;
+      flex-basis: 100%;
     }
   }
 }

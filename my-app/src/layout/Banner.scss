@@ -9,12 +9,12 @@
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
-  background-image: url("https://unsplash.it/1920/1080");
+  background-image: url("../../public/bannerBackground.jpg");
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 2rem;
   max-width: 100%;
-  
 
   // Add a semi-transparent overlay over the background image
   &::before {
@@ -34,7 +34,7 @@
     text-shadow: 0 0 10px $background-dark;
     font-weight: 700;
   }
-  
+
   // Add responsive styles
   @media screen and (max-width: 768px) {
     padding: 0 1rem;
