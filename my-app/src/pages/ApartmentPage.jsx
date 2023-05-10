@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import DescriptionPanel from "../components/DescriptionPanel";
 import "./ApartmentPage.scss";
 import { ImageBanner } from "../components/ImageBanner";
