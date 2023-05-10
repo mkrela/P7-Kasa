@@ -6,6 +6,7 @@ import Main from "../layouts/Main";
 import ApartmentPage from "../pages/ApartmentPage.jsx";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import { ErrorPageNotFound } from "../pages/ErrorPageNotFound";
+import About from "../pages/About.jsx";
 
 const HeaderFooterLayout = () => {
   return (
@@ -44,7 +45,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <h1>A PROPOSSSSSSS</h1>,
+        element: <About />,
       },
       {
         path: "/contact",

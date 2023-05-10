@@ -2,112 +2,16 @@
 
 .apartment-page {
   color: $color-primary;
-  div:first-child {
-    margin-bottom: 1rem;
-  }
-  img {
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  }
-  h1 {
-    font-weight: 400;
-    margin-block: 0;
-  }
-  h2 {
-    font-weight: 400;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 20px;
-  }
 }
 
-.apartment__owner__details {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.apartment__owner__badge {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: $grid-background;
-}
-
-.apartment__owner__ratings {
+.apartment__description__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.8em;
-  gap: 0.2rem;
-  width: auto;
-  .on {
-    color: $color-primary;
-  }
-  .off {
-    color: $grid-background;
-  }
-}
-
-.apartment__tags {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
-  text-align: center;
   gap: 1rem;
-  span {
-    background-color: $color-primary;
-    color: $color-tertiary;
 
-    padding: 0.5em 1em;
-    border-radius: 0.7rem;
-  }
-}
-
-.apartment__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  .apartment__title {
-    flex-grow: 1;
-  }
-  h3 {
-    margin-block: 0;
+  @media screen and (max-width: 768px) {
     display: flex;
+    gap: 1rem;
     flex-direction: column;
-    align-items: end;
-    font-weight: 400;
-  }
-}
-
-.apartment__description {
-  p {
-    margin-block: 0;
-  }
-  .description__header {
-    background-color: $color-primary;
-    color: $color-tertiary;
-    padding: 0.5rem 1rem;
-    border-radius: 0.7rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    i{
-      font-size: 2rem;
-      cursor: pointer;
-    }
-  }
-  .description__content {
-    background-color: $background-light;
-    color: $color-primary;
-    padding:1rem;
-    border-radius: .7rem;
-    position: relative;
-    top: -0.5rem;
-    z-index: -1;
   }
 }
