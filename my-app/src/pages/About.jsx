@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../layouts/Banner";
-import ApartmentDescription from "../components/ApartmentDescription";
+import ApartmentDescription from "../components/DescriptionPanel";
 import './About.scss'
 
 function About() {
