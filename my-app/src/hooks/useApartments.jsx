@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 export const useApartments = () => {
   const [apartments, setApartments] = useState([]);
-  console.log(apartments);
   useEffect(() => {
     fetch("db.json")
       .then((res) => res.json())

@@ -9,7 +9,6 @@ export function useApartment() {
     fetch("db.json")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data); // Vérifiez que les données sont correctement récupérées
         const flat = data.find((flat) => flat.id === id);
         setFlat(flat);
       })
