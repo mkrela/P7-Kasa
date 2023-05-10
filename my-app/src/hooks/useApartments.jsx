@@ -2,17 +2,13 @@ import { useState, useEffect } from "react";
 
 export const useApartments = () => {
   const [apartments, setApartments] = useState([]);
+  console.log(apartments);
   useEffect(() => {
-    const abortController = new AbortController();
-    fetch("db.json", { signal: abortController.signal })
+    fetch("db.json")
       .then((res) => res.json())
       .then((res) => setApartments(res))
       .catch(console.error);
-
-    return () => {
-      console.log("cleanup");
-      abortController.abort();
-    };
   }, []);
+
   return apartments;
 };

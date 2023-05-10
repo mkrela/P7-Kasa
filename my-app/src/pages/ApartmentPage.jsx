@@ -7,6 +7,7 @@ import { useApartment } from "../hooks/useApartment";
 
 function ApartmentPage() {
   const flat = useApartment();
+  console.log(flat);
 
   if (flat == null) return <div>Loading...</div>;
   return (

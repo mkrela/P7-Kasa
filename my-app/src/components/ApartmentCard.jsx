@@ -1,14 +1,13 @@
 import React from "react";
 import "./ApartmentCard.scss";
 import { Link } from "react-router-dom";
-import "./ApartmentCard.scss";
 
 function ApartmentCard(props) {
   return (
     <Link
-      to="/flat"
+      to={`/${props.id}`}
       state={{
-        apartmentId: props.id
+        apartmentId: props.id,
       }}
     >
       <div className="apartment">
