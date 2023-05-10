@@ -1,12 +1,12 @@
 import React from "react";
-import HomePage from "../pages/HomePage.jsx";
-import Footer from "../layouts/Footer";
-import Navbar from "../components/Navbar";
-import Main from "../layouts/Main";
-import ApartmentPage from "../pages/ApartmentPage.jsx";
 import { createBrowserRouter, Outlet } from "react-router-dom";
+import Homepage from "../pages/Homepage";
+import Footer from "../layout/Footer";
+import Main from "../layout/Main";
+import Navbar from "../components/Navbar";
+import ApartmentPage from "../pages/ApartmentPage";
+import About from "../pages/About";
 import { ErrorPageNotFound } from "../pages/ErrorPageNotFound";
-import About from "../pages/About.jsx";
 
 const HeaderFooterLayout = () => {
   return (
@@ -20,36 +20,22 @@ const HeaderFooterLayout = () => {
   );
 };
 
-const Layout404 = () => {
-  return (
-    <>
-      <Navbar />
-      <ErrorPageNotFound />
-      <Footer />
-    </>
-  );
-};
-
 export const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout />,
-    errorElement: <Layout404 />,
+    errorElement: <ErrorPageNotFound />,
     children: [
       {
         path: "/",
-        element: <HomePage />,
+        element: <Homepage />,
       },
       {
-        path: "/apartment",
+        path: "/flat",
         element: <ApartmentPage />,
       },
       {
         path: "/about",
         element: <About />,
-      },
-      {
-        path: "/contact",
-        element: <h1>CONTACT</h1>,
       },
     ],
   },

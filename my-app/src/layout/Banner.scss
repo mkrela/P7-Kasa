@@ -1,0 +1,46 @@
+@use "../scss/variables.scss" as *;
+
+.banner {
+  position: relative;
+  min-height: 140px;
+  margin: auto;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  background-image: url("https://unsplash.it/1920/1080");
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  
+
+  // Add a semi-transparent overlay over the background image
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: $background-dark;
+    opacity: 0.5;
+    border-radius: 2rem;
+  }
+
+  // Style the heading text
+  h2 {
+    color: $color-tertiary;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px $background-dark;
+    font-weight: 700;
+  }
+  
+  // Add responsive styles
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+    min-height: 100px;
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}

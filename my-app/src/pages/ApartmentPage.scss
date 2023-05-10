@@ -2,16 +2,12 @@
 
 .apartment-page {
   color: $color-primary;
-}
-
-.apartment__description__wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-
-  @media screen and (max-width: 768px) {
+  .apartment__description__area {
     display: flex;
     gap: 1rem;
-    flex-direction: column;
+    overflow: hidden;
+    @media screen and (width <= 768px) {
+      flex-direction: column;
+    }
   }
 }

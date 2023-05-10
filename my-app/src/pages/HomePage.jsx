@@ -1,9 +1,9 @@
 import React from "react";
-import Banner from "../layouts/Banner.jsx";
+import "./Homepage.scss";
+import Banner from "../layout/Banner.jsx";
 import ApartmentGrid from "../components/ApartmentGrid.jsx";
-import "./HomePage.scss";
 
-function HomePage() {
+function Homepage() {
   return (
     <>
       <Banner />
@@ -12,4 +12,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Homepage;
