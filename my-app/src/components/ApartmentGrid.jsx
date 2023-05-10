@@ -1,13 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ApartmentGrid.scss";
 import ApartmentCard from "./ApartmentCard.jsx";
-import { useApartments } from "../hooks/useApartments.jsx";
+import { useApartments } from "./../hooks/useApartments.jsx";
 
 function ApartmentGrid() {
-  // Get apartments from the useApartments hook
   const apartments = useApartments();
-
-  // Render the list of apartments as ApartmentCards
   return (
     <div className="grid">
       {apartments.map((apartment) => (

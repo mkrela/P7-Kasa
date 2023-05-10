@@ -3,7 +3,7 @@ import "./Homepage.scss";
 import Banner from "../layout/Banner.jsx";
 import ApartmentGrid from "../components/ApartmentGrid.jsx";
 
-function Homepage() {
+function HomePage() {
   return (
     <>
       <Banner />
@@ -12,4 +12,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default HomePage;
