@@ -13,19 +13,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: brightness(0.8);
   margin-bottom: 2rem;
   max-width: 100%;
 
   // Add a semi-transparent overlay over the background image
   &::before {
     position: absolute;
+    border-radius: 2rem;
     content: "";
     inset: 0;
-    background-color: $background-dark;
     opacity: 0.5;
-    border-radius: 2rem;
   }
-
   // Style the heading text
   h2 {
     color: $color-tertiary;
