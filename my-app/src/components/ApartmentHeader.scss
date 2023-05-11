@@ -25,6 +25,7 @@
 
   .apartment__owner__details {
     display: flex;
+    justify-content: end;
     gap: 0.5rem;
 
     @media screen and (max-width: 768px) {
@@ -63,7 +64,7 @@
   h2 {
     font-weight: 400;
     margin-top: 0.5em;
-    margin-bottom: 0.2em;
+    margin-bottom: 1em;
     font-size: 20px;
   }
 
