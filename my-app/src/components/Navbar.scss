@@ -2,8 +2,9 @@
 
 .navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   color: $color-primary;
   font-weight: 700;
   gap: 2rem;
@@ -52,9 +53,14 @@
   }
   @media screen and (max-width: 768px) {
     .navbar__links {
+      font-size: 12px;
       justify-content: end;
       padding-right: 0;
       width: auto;
+      > a > div {
+        font-size: 12px;
+        display: none;
+      }
     }
   }
 }

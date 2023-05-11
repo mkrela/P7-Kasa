@@ -1,24 +1,10 @@
 import React from "react";
-import { createBrowserRouter, Outlet } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/Homepage";
-import Footer from "../layout/Footer";
-import Main from "../layout/Main";
-import Navbar from "../components/Navbar";
 import ApartmentPage from "../pages/ApartmentPage";
 import About from "../pages/About";
 import { ErrorPageNotFound } from "../pages/ErrorPageNotFound";
-
-const HeaderFooterLayout = () => {
-  return (
-    <>
-      <Navbar />
-      <Main>
-        <Outlet />
-      </Main>
-      <Footer />
-    </>
-  );
-};
+import HeaderFooterLayout from "../layout/HeaderFooterLayout";
 
 export const router = createBrowserRouter([
   {
@@ -27,16 +13,16 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomePage />
+        element: <HomePage />,
       },
       {
         path: "/:id",
-        element: <ApartmentPage />
+        element: <ApartmentPage />,
       },
       {
         path: "/about",
-        element: <About />
-      }
-    ]
-  }
+        element: <About />,
+      },
+    ],
+  },
 ]);

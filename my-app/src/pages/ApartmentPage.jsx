@@ -1,13 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { DescriptionPanel } from "../components/DescriptionPanel";
 import "./ApartmentPage.scss";
 import { ImageBanner } from "../components/ImageBanner";
 import { ApartmentHeader } from "../components/ApartmentHeader";
 import { useApartment } from "../hooks/useApartment";
+import { ErrorPageNotFound } from "./ErrorPageNotFound";
 
 function ApartmentPage() {
   const flat = useApartment();
-  if (flat == null) return <div>Loading...</div>;
+
+  if (!flat) {
+    return (
+      <>
+        <ErrorPageNotFound />
+      </>
+    );
+  }
+
   return (
     <div className="apartment-page">
       <ImageBanner pictures={flat.pictures} />
